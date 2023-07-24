@@ -20,11 +20,17 @@ npm i
 Run a test:
 
 ```
-npx codeceptjs run --grep "@linksAndPages" --steps --verbose
+npm run test @noResult
+npm run test @atLeastOneResult
+npm run test @getUsers
+npm run test @createUser
+npm run test @linksAndPages
+```
 
-npx codeceptjs run --grep "@data" --steps --verbose
-
-npx codeceptjs run --grep "@noResult" --steps --verbose
+Be compliant:
+```
+npm run build
+npm run def
 ```
 
 ## Contents

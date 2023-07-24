@@ -24,14 +24,16 @@ exports.config = {
     }
   },
   include: {
-    navigationFragment: './fragments/navigation.ts',
-    cookiesFragment: './fragments/cookies.ts',
-    mainPage: './pages/main.ts',
-    footerFragment: './fragments/footer.ts',
-    aboutPage: './pages/about.ts',
-    responsibleGamingPage: './pages/responsibleGaming.ts',
-    offerSearchFragment: './fragments/offerSearch.ts',
-    usersProxy: './proxy/users.ts'
+    // Fragments
+    cookiesFragment: './fragments/cookies-fragment.ts',
+    footerFragment: './fragments/footer-fragment.ts',
+    offerSearchFragment: './fragments/offer-search-fragment.ts',
+    // Pages
+    termsAndConditionsPage: './pages/terms-and-conditions-page.ts',
+    homePage: './pages/home-page.ts',
+    responsibleGamingPage: './pages/responsible-gaming-page.ts',
+    // Proxies
+    usersProxy: './proxy/users-proxy.ts'
   },
   name: 'typescript-boilerplate',
   plugins: {
@@ -43,7 +45,8 @@ exports.config = {
     }
   },
   gherkin: {
-    features: './features/*.feature',
-    steps: './step_definitions/*.ts'
-  }
+    features: './features/**/*.feature',
+    steps: './step_definitions/*-steps.ts'
+  },
+  fullPromiseBased: true,
 }
